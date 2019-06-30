@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The MoKee Open Source Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,32 +12,23 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
-
-#
-# This file sets variables that control the way modules are built
-# thorughout the system. It should not be used to conditionally
-# disable makefiles (the proper mechanism to control what gets
-# included in a build is to use PRODUCT_PACKAGES in a product
-# definition file).
-#
 
 # Inherit from yoshino
 -include device/sony/yoshino/BoardConfigCommon.mk
 
 DEVICE_PATH := device/sony/maple
 
-# HAX: Remove AOSP
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-
-# Assertions
-TARGET_OTA_ASSERT_DEVICE := G8142,g8142,maple
+TARGET_KERNEL_CONFIG := lineage_maple_defconfig
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
-# MK Hardware
-BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/mkhw
+# Init
+TARGET_LIBINIT_YOSHINO_DEFINES_FILE := $(DEVICE_PATH)/init_maple/init_maple.cpp
+TARGET_UNIFIED_DEVICE := true
+
+# Selinux
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # inherit from the proprietary version
 -include vendor/sony/maple/BoardConfigVendor.mk

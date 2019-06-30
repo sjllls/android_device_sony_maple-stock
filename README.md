@@ -1,4 +1,3 @@
-Copyright (C) 2017-2018 - The MoKee Open Source Project<br>
 Copyright (C) 2017-2018 - The LineageOS Project
 
 Device configuration for Sony Xperia XZ Premium
