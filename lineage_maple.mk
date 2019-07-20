@@ -25,9 +25,9 @@ PRODUCT_GMS_CLIENTID_BASE := android-sonymobile
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=maple \
-    PRIVATE_BUILD_DESC="maple-user 9 YOSHINO-2.2.0-190425-1906 1 dev-keys"
+    PRIVATE_BUILD_DESC="maple-user 9 YOSHINO-2.2.0-190522-0405 1 dev-keys"
 
-BUILD_FINGERPRINT := Sony/maple/maple:9/YOSHINO-2.2.0-190425-1906/1:user/dev-keys
+BUILD_FINGERPRINT := Sony/maple/maple:9/YOSHINO-2.2.0-190522-0405/1:user/dev-keys
 
 TARGET_VENDOR := sony
 
